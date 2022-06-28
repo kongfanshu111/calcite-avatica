@@ -20,7 +20,7 @@ limitations under the License.
   <parent>
     <groupId>org.apache.calcite.avatica</groupId>
     <artifactId>avatica-parent</artifactId>
-    <version>1.11.0.x-3.x-r2</version>
+    <version>1.11.0.x-3.x-r3</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
@@ -97,6 +97,17 @@ limitations under the License.
                   </resources>
                 </transformer>
               </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                    <exclude>META-INF/maven/**</exclude>
+                  </excludes>
+                </filter>
+              </filters>
             </configuration>
           </execution>
         </executions>
